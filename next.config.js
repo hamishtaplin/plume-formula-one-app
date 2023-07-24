@@ -1,4 +1,26 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+module.exports = {
+  appDir: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media-1.api-sports.io',
+        port: '',
+        pathname: '/formula-1/**/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media-2.api-sports.io',
+        port: '',
+        pathname: '/formula-1/**/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media-3.api-sports.io',
+        port: '',
+        pathname: '/formula-1/**/**',
+      },
+    ],
+  },
+};
